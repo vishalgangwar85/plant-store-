@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop – Earth's Exhale</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">Earth's Exhale</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html" class="active">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn">🔍</button>
+      <button class="icon-btn cart-btn">🛒 <span class="cart-count">0</span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="ph-content">
+      <h1>Our <em>Plant Collection</em></h1>
+      <p>Discover 500+ varieties of handpicked plants for every space and lifestyle</p>
+    </div>
+  </section>
+
+  <!-- SHOP LAYOUT -->
+  <section class="shop-layout">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="sidebar">
+      <div class="filter-group">
+        <h4>Search</h4>
+        <input type="text" id="search-input" placeholder="Search plants..." class="search-input"/>
+      </div>
+
+      <div class="filter-group">
+        <h4>Category</h4>
+        <label><input type="checkbox" value="all" checked id="cat-all" onchange="filterProducts()"> All Plants</label>
+        <label><input type="checkbox" value="tropical" onchange="filterProducts()"> 🪴 Tropical</label>
+        <label><input type="checkbox" value="succulent" onchange="filterProducts()"> 🌵 Succulents</label>
+        <label><input type="checkbox" value="flowering" onchange="filterProducts()"> 🌸 Flowering</label>
+        <label><input type="checkbox" value="airpurifier" onchange="filterProducts()"> 🌾 Air Purifiers</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Price Range</h4>
+        <input type="range" id="price-range" min="0" max="3000" value="3000" oninput="updatePrice(this.value)"/>
+        <p>Up to ₹<span id="price-display">3000</span></p>
+      </div>
+
+      <div class="filter-group">
+        <h4>Light Requirement</h4>
+        <label><input type="checkbox" value="low" onchange="filterProducts()"> Low Light</label>
+        <label><input type="checkbox" value="medium" onchange="filterProducts()"> Medium Light</label>
+        <label><input type="checkbox" value="high" onchange="filterProducts()"> Bright Light</label>
+      </div>
+
+      <div class="filter-group">
+        <h4>Sort By</h4>
+        <select id="sort-select" onchange="filterProducts()">
+          <option value="default">Default</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name A-Z</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- PRODUCTS AREA -->
+    <main class="products-area">
+      <div class="products-top-bar">
+        <p id="product-count">Showing all products</p>
+        <div class="view-toggle">
+          <button id="grid-btn" class="active" onclick="setView('grid')">⊞ Grid</button>
+          <button id="list-btn" onclick="setView('list')">☰ List</button>
+        </div>
+      </div>
+      <div class="products-grid" id="shop-products"></div>
+    </main>
+  </section>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart 🛒</h3>
+      <button onclick="closeCart()" class="close-btn">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="empty-cart">Your cart is empty. Start adding plants!</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">₹ 0</span>
+      </div>
+      <button class="btn btn-primary full-width">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Earth's Exhale</h3>
+        <p>Bringing nature closer to you, one plant at a time.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📧 hello@earthsexhale.com</p>
+        <p>📞 +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Earth's Exhale. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
