@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Earth's Exhale – Plant Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">Earth's Exhale</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="product.html">Shop</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn">🔍</button>
+      <button class="icon-btn cart-btn">🛒 <span class="cart-count">0</span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-blur"></div>
+    <div class="hero-content">
+      <span class="hero-tag">🌿 Premium Indoor Plants</span>
+      <h1 class="hero-title">Breathe Life<br/><em>Into Your Space</em></h1>
+      <p class="hero-sub">Handpicked exotic plants delivered fresh to your doorstep. Transform your home into a green sanctuary.</p>
+      <div class="hero-actions">
+        <a href="product.html" class="btn btn-primary">Shop Now</a>
+        <a href="#featured" class="btn btn-ghost">Explore Collection</a>
+      </div>
+    </div>
+    <div class="hero-plant-showcase">
+      <div class="plant-card-float card-1">
+        <div class="plant-emoji">🪴</div>
+        <p>Monstera Deliciosa</p>
+        <span>₹ 899</span>
+      </div>
+      <div class="plant-card-float card-2">
+        <div class="plant-emoji">🌵</div>
+        <p>Golden Barrel Cactus</p>
+        <span>₹ 349</span>
+      </div>
+      <div class="plant-card-float card-3">
+        <div class="plant-emoji">🌿</div>
+        <p>Peace Lily</p>
+        <span>₹ 499</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="stats-banner">
+    <div class="stat"><h3>500+</h3><p>Plant Varieties</p></div>
+    <div class="divider"></div>
+    <div class="stat"><h3>12K+</h3><p>Happy Customers</p></div>
+    <div class="divider"></div>
+    <div class="stat"><h3>98%</h3><p>Healthy Delivery</p></div>
+    <div class="divider"></div>
+    <div class="stat"><h3>Free</h3><p>Shipping Above ₹999</p></div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="section-header">
+      <h2>Browse by <em>Category</em></h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card" onclick="window.location='product.html'">
+        <div class="cat-icon">🌵</div>
+        <h4>Succulents</h4>
+        <p>Low-maintenance beauties</p>
+      </div>
+      <div class="cat-card" onclick="window.location='product.html'">
+        <div class="cat-icon">🪴</div>
+        <h4>Tropical</h4>
+        <p>Lush exotic foliage</p>
+      </div>
+      <div class="cat-card" onclick="window.location='product.html'">
+        <div class="cat-icon">🌸</div>
+        <h4>Flowering</h4>
+        <p>Year-round blooms</p>
+      </div>
+      <div class="cat-card" onclick="window.location='product.html'">
+        <div class="cat-icon">🌾</div>
+        <h4>Air Purifiers</h4>
+        <p>Clean your indoor air</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BESTSELLERS -->
+  <section class="featured" id="featured">
+    <div class="section-header">
+      <h2>Our Top Selling <em>Plants</em></h2>
+      <a href="product.html" class="view-all">View All →</a>
+    </div>
+    <div class="products-grid" id="home-products"></div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <div class="section-header">
+      <h2>Why Choose <em>Earth's Exhale?</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon">🌱</span>
+        <h4>Hand-Curated Plants</h4>
+        <p>Every plant is selected by our expert botanists for health and beauty.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">📦</span>
+        <h4>Safe Packaging</h4>
+        <p>Eco-friendly packaging ensures your plant arrives safe and healthy.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">💚</span>
+        <h4>Plant Guarantee</h4>
+        <p>30-day health guarantee. If your plant isn't thriving, we'll replace it.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">🚚</span>
+        <h4>Fast Delivery</h4>
+        <p>2-5 day delivery across India. Express options available.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>What Our <em>Customers Say</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p>"My Monstera arrived perfectly packaged. It's been thriving for months!"</p>
+        <div class="testi-author">
+          <div class="avatar">P</div>
+          <div><strong>Priya Sharma</strong><br/><small>Mumbai</small></div>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <p>"Best plant store online. The quality is unmatched and delivery was super fast."</p>
+        <div class="testi-author">
+          <div class="avatar">R</div>
+          <div><strong>Rahul Verma</strong><br/><small>Delhi</small></div>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="testi-card">
+        <p>"Love the variety! Got 3 plants and all are doing amazing. Will order again!"</p>
+        <div class="testi-author">
+          <div class="avatar">A</div>
+          <div><strong>Ananya Gupta</strong><br/><small>Bangalore</small></div>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Get Plant Care Tips & <em>Exclusive Offers</em></h2>
+    <p>Join 10,000+ plant lovers. Get weekly tips and early access to new arrivals.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter your email..." />
+      <button class="btn btn-primary">Subscribe</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Earth's Exhale</h3>
+        <p>Bringing nature closer to you, one plant at a time.</p>
+        <div class="socials">
+          <a href="#">🌿 Instagram</a>
+          <a href="#">🐦 Twitter</a>
+          <a href="#">📘 Facebook</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Shop</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Plant Care Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>📧 hello@earthsexhale.com</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📍 New Delhi, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Earth's Exhale. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
